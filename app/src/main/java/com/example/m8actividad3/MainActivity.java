@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String selectedItem = modesSpinner.getSelectedItem().toString();
                 if(mediaPlayer.isPlaying()) mediaPlayer.stop();
-                if(videoView.isPlaying()) mediaPlayer.stop();
+                if(videoView.isPlaying()) videoView.stopPlayback();
 
                 if(selectedItem.equals(modes[0])) {
                     mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.pokemon);
